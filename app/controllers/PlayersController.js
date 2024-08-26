@@ -4,7 +4,7 @@ export class PlayersController {
 
   constructor() {
 
-    console.log(`Charaters Controller is Loaded`);
+    console.log(`Players Controller is Loaded`);
 
   }
 
