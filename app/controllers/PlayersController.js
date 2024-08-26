@@ -7,14 +7,20 @@ export class PlayersController {
 
     console.log(`Players Controller is Loaded`);
 
-    playersService.logPlayers()
-
-
-
-
 
 
     this.drawPlayers()
+  }
+
+  increaseScore(playerName) {
+
+    playersService.increaseScore(playerName)
+    this.drawPlayers()
+  }
+  decreaseScore(playerName) {
+    playersService.decreaseScore(playerName)
+    this.drawPlayers()
+
   }
 
   drawPlayers() {
