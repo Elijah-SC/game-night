@@ -1,17 +1,21 @@
-import { Player } from "./models/players.js";
+import { players } from "./models/players.js";
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
 
 class ObservableAppState extends EventEmitter {
 
-  player = [
-    new Player('Elijah'),
-    new Player('Jake'),
-    new Player(`Mat`),
-    new Player(`Autumn`),
-    new Player(`Joe`)
+  scoreToWin = 11
+
+  players = [
+    new players('Elijah'),
+    new players('Jake'),
+    new players(`Mat`),
+    new players(`Autumn`),
+    new players(`Joe`),
   ]
+
+
 
 
 
@@ -22,3 +26,6 @@ class ObservableAppState extends EventEmitter {
 
 
 export const AppState = createObservableProxy(new ObservableAppState())
+
+console.log('Players', AppState.players);
+

@@ -1,10 +1,12 @@
 import { router } from './router-config.js';
 import { HomeController } from './controllers/HomeController.js';
 import { PlayersController } from "./controllers/PlayersController.js";
-
 const USE_ROUTER = false
 
 class App {
+
+
+
 
   HomeController = new HomeController()
 
