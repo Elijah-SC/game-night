@@ -11,7 +11,11 @@ class PlayersService {
   decreaseScore(playerName) {
     console.log(`increasing score for`, playerName)
     const foundPlayer = AppState.players.find(player => player.name == playerName)
-    foundPlayer.score--
+
+    if (foundPlayer.score > 0) {
+
+      foundPlayer.score--
+    }
   }
 
 
